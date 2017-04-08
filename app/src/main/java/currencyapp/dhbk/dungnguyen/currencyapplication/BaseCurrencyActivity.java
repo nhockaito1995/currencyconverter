@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -14,13 +15,20 @@ public class BaseCurrencyActivity extends AppCompatActivity {
 
     ListView lvBaseCurrency;
     ArrayList<String> arrayBaseCurrency;
+    TextView txvNote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_currency);
 
+        txvNote = (TextView) findViewById(R.id.textViewNote);
+        Bundle bud = getIntent().getExtras();
+        String currencynote = bud.getString("transfercurrency");
+        txvNote.setText("Bạn có muốn chuyển đổi từ "+currencynote+" sang:");
+
         lvBaseCurrency = (ListView) findViewById(R.id.ListViewBaseCurrency);
+
         arrayBaseCurrency = new ArrayList<String>();
         arrayBaseCurrency.add("AUD");
         arrayBaseCurrency.add("BGN");
