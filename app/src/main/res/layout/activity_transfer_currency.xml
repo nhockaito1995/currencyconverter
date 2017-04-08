@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="currencyapp.dhbk.dungnguyen.currencyapplication.TransferCurrencyActivity">
+
+    <EditText
+        android:id="@+id/editTextForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="true"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editTextTo"
+        android:layout_alignStart="@+id/editTextTo"
+        android:layout_marginTop="75dp" />
+
+    <EditText
+        android:id="@+id/editTextTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="112dp"
+        android:layout_below="@+id/editTextForm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="177dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editTextTo"
+        android:layout_alignStart="@+id/editTextTo" />
+
+    <TextView
+        android:id="@+id/textViewTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextTo"
+        android:layout_alignBottom="@+id/editTextTo"
+        android:layout_alignLeft="@+id/textViewFrom"
+        android:layout_alignStart="@+id/textViewFrom"
+        android:text="ERU"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <TextView
+        android:id="@+id/textViewFrom"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="125dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_alignBaseline="@+id/editTextForm"
+        android:layout_alignBottom="@+id/editTextForm"
+        android:layout_toLeftOf="@+id/editTextForm"
+        android:layout_toStartOf="@+id/editTextForm" />
+</RelativeLayout>

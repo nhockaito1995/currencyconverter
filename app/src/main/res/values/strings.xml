@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CurrencyApplication</string>
+    <string name="title_activity_base_currency">BaseCurrencyActivity</string>
+    <string name="title_activity_transfer_currency">TransferCurrencyActivity</string>
+</resources>

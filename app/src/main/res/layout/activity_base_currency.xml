@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="10dp"
+        android:text="Chọn loại tiền bạn muốn đổi"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <ListView
+        android:id="@+id/ListViewBaseCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

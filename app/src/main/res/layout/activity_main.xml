@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="currencyapp.dhbk.dungnguyen.currencyapplication.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:background="#2e494e"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:paddingTop="10dp"
+        android:text="Tỷ giá ngoại tệ"
+        android:textAlignment="center" />
+
+    <ListView
+        android:id="@+id/ListViewCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</LinearLayout>
