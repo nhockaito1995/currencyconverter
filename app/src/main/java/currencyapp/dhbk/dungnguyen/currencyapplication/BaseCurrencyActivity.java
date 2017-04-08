@@ -17,6 +17,14 @@ public class BaseCurrencyActivity extends AppCompatActivity {
     ArrayList<String> arrayBaseCurrency;
     TextView txvNote;
 
+    public boolean setElement(String s, String x, ArrayList<String> n){
+        if(s.equals(x)) return false;
+        else{
+            n.add(x);
+            return true;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,37 +38,37 @@ public class BaseCurrencyActivity extends AppCompatActivity {
         lvBaseCurrency = (ListView) findViewById(R.id.ListViewBaseCurrency);
 
         arrayBaseCurrency = new ArrayList<String>();
-        arrayBaseCurrency.add("AUD");
-        arrayBaseCurrency.add("BGN");
-        arrayBaseCurrency.add("BRL");
-        arrayBaseCurrency.add("CAD");
-        arrayBaseCurrency.add("CHF");
-        arrayBaseCurrency.add("CNY");
-        arrayBaseCurrency.add("CZK");
-        arrayBaseCurrency.add("DKK");
-        arrayBaseCurrency.add("GBP");
-        arrayBaseCurrency.add("HKD");
-        arrayBaseCurrency.add("HRK");
-        arrayBaseCurrency.add("HUF");
-        arrayBaseCurrency.add("IDR");
-        arrayBaseCurrency.add("ILS");
-        arrayBaseCurrency.add("INR");
-        arrayBaseCurrency.add("JPY");
-        arrayBaseCurrency.add("KRW");
-        arrayBaseCurrency.add("MXN");
-        arrayBaseCurrency.add("MYR");
-        arrayBaseCurrency.add("NOK");
-        arrayBaseCurrency.add("NZD");
-        arrayBaseCurrency.add("PHP");
-        arrayBaseCurrency.add("PLN");
-        arrayBaseCurrency.add("RON");
-        arrayBaseCurrency.add("RUB");
-        arrayBaseCurrency.add("SEK");
-        arrayBaseCurrency.add("SGD");
-        arrayBaseCurrency.add("THB");
-        arrayBaseCurrency.add("TRY");
-        arrayBaseCurrency.add("ZAR");
-        arrayBaseCurrency.add("EUR");
+        setElement(currencynote,"AUD",arrayBaseCurrency);
+        setElement(currencynote,"BGN",arrayBaseCurrency);
+        setElement(currencynote,"BRL",arrayBaseCurrency);
+        setElement(currencynote,"CAD",arrayBaseCurrency);
+        setElement(currencynote,"CHF",arrayBaseCurrency);
+        setElement(currencynote,"CNY",arrayBaseCurrency);
+        setElement(currencynote,"CZK",arrayBaseCurrency);
+        setElement(currencynote,"DKK",arrayBaseCurrency);
+        setElement(currencynote,"GBP",arrayBaseCurrency);
+        setElement(currencynote,"HKD",arrayBaseCurrency);
+        setElement(currencynote,"HRK",arrayBaseCurrency);
+        setElement(currencynote,"HUF",arrayBaseCurrency);
+        setElement(currencynote,"IDR",arrayBaseCurrency);
+        setElement(currencynote,"ILS",arrayBaseCurrency);
+        setElement(currencynote,"INR",arrayBaseCurrency);
+        setElement(currencynote,"JPY",arrayBaseCurrency);
+        setElement(currencynote,"KRW",arrayBaseCurrency);
+        setElement(currencynote,"MXN",arrayBaseCurrency);
+        setElement(currencynote,"MYR",arrayBaseCurrency);
+        setElement(currencynote,"NOK",arrayBaseCurrency);
+        setElement(currencynote,"NZD",arrayBaseCurrency);
+        setElement(currencynote,"PHP",arrayBaseCurrency);
+        setElement(currencynote,"PLN",arrayBaseCurrency);
+        setElement(currencynote,"RON",arrayBaseCurrency);
+        setElement(currencynote,"RUB",arrayBaseCurrency);
+        setElement(currencynote,"SEK",arrayBaseCurrency);
+        setElement(currencynote,"SGD",arrayBaseCurrency);
+        setElement(currencynote,"THB",arrayBaseCurrency);
+        setElement(currencynote,"TRY",arrayBaseCurrency);
+        setElement(currencynote,"ZAR",arrayBaseCurrency);
+        setElement(currencynote,"EUR",arrayBaseCurrency);
 
         ArrayAdapter adapter = new ArrayAdapter(
                 BaseCurrencyActivity.this,
