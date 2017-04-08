@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.DecimalFormat;
 
 public class TransferCurrencyActivity extends Activity {
     TextView from, to;
@@ -52,7 +53,8 @@ public class TransferCurrencyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Float a = Float.parseFloat(editForm.getText().toString());
-                editTo.setText(String.valueOf(a*rateofmoney));
+                DecimalFormat df = new DecimalFormat("#.0000");
+                editTo.setText(String.valueOf(df.format(a/rateofmoney)));
             }
         });
     }
