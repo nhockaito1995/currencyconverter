@@ -46,8 +46,6 @@ public class MainActivity extends Activity {
 
         @Override
         protected void onPostExecute(String s) {
-//            super.onPostExecute(s);
-//            Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
             try {
                 arrayCurrency = new ArrayList<Currency>();
 
@@ -98,8 +96,8 @@ public class MainActivity extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent nextpage = new Intent(MainActivity.this, BaseCurrencyActivity.class);
-                        nextpage.putExtra("BaseCurrencyCode", arrayCurrency.get(position).CurrencyCode);
-                        nextpage.putExtra("Transfer", arrayCurrency.get(position).Transfer);
+                        nextpage.putExtra("transfercurrency", arrayCurrency.get(position).CurrencyCode);
+//                        nextpage.putExtra("rate", String.valueOf(arrayCurrency.get(position).Transfer));
                         startActivity(nextpage);
                     }
                 });

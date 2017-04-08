@@ -29,20 +29,21 @@
         android:inputType="numberDecimal"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="112dp"
+        android:layout_marginTop="28dp"
         android:layout_below="@+id/editTextForm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/buttonConvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="177dp"
-        android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/editTextTo"
-        android:layout_alignStart="@+id/editTextTo" />
+        android:layout_alignStart="@+id/editTextTo"
+        android:layout_below="@+id/editTextTo"
+        android:layout_marginTop="13dp"
+        android:text="Chuyển đổi"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="177dp" />
 
     <TextView
         android:id="@+id/textViewTo"

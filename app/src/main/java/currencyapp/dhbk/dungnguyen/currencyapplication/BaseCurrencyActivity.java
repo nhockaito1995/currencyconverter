@@ -20,10 +20,8 @@ public class BaseCurrencyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_currency);
 
-        setContentView(R.layout.activity_base_currency);
         lvBaseCurrency = (ListView) findViewById(R.id.ListViewBaseCurrency);
         arrayBaseCurrency = new ArrayList<String>();
-
         arrayBaseCurrency.add("AUD");
         arrayBaseCurrency.add("BGN");
         arrayBaseCurrency.add("BRL");
@@ -67,12 +65,14 @@ public class BaseCurrencyActivity extends AppCompatActivity {
         lvBaseCurrency.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle bd = getIntent().getExtras();
+                String currencycode = bd.getString("transfercurrency");
                 Intent nextpage = new Intent(BaseCurrencyActivity.this, TransferCurrencyActivity.class);
-
+                nextpage.putExtra("transfermoney", currencycode);
+                nextpage.putExtra("basemoney", arrayBaseCurrency.get(position));
                 startActivity(nextpage);
             }
         });
         //
     }
-
 }
